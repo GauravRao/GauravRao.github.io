@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>List</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        /*.bodyContainer {
+            background-color: white;
+            width: 50%;
+            height: 500px;
+            position: relative;
+            top: 200px;
+            left: 20%
+        }*/
+
+        .clickbutton {
+            position: relative;
+            top: 5px;
+            left: 111%;
+            width: 22%;
+            height: 32px;
+            color: white;
+            background-color: rgb(151, 124, 172);
+            border-radius: 6px 6px;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            position: relative;
+            left: -4.6%;
+            width: 104.6%;
+            border-bottom: 2px solid rgb(65, 66, 69);
+        }
+
+        .heading {
+            color: rgb(151, 124, 172);
+            position: relative;
+            left: 31%;
+            font-size: 65px;
+        }
+
+        .inputContainer {
+            position: relative;
+            left: 15%;
+            box-shadow: 2px 2px 2px rgb(65, 66, 69);
+            border: 1px solid rgb(65, 66, 69);
+            width: 60%;
+            height: auto;
+            border-top: 10px solid rgb(94, 119, 106);
+        }
+
+        ul {
+            //  list-style-image:url(/home/nireekshitha/Documents/nireekshitha/workspace/other/c.png);
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .inptstyle {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid rgb(65, 66, 69);
+            padding-bottom: 20px;
+            width: 99.7%;
+            padding-left: 3px;
+            padding-top: 4px;
+            font-size: 30px;
+            text-align: center;
+            top: 10px;
+        }
+
+        .inptstyle .active {
+            border-top: none;
+            border-left: none;
+            border-bottom: 1px solid blue;
+        }
+
+        .inptstyle:focus {
+            border-top: none;
+            border-left: none;
+            border-bottom: 1px solid blue;
+        }
+
+        .ticklist {
+            color: black;
+            padding-right: 20px;
+            font-size: 31px;
+        }
+
+        .closelist {
+            color: black;
+            position: absolute;
+            left: 94%;
+            font-size: 31px;
+            cursor: pointer;
+        }
+
+        .listingStyle {
+            font-size: 30px;
+            height: 60px;
+        }
+
+         ::-webkit-input-placeholder {
+            font-size: 25px;
+            /*padding-left: 10px;*/
+            position: relative;
+            top: 10px;
+            text-align: center;
+        }
+
+         ::-moz-placeholder {
+            font-size: 25px;
+            /*padding-left: 10px;*/
+            position: relative;
+            top: 10px;
+            text-align: center;
+        }
+
+        @media screen and (min-width:700px) and (max-width:1200px) {
+            .heading {
+                color: rgb(151, 124, 172);
+                position: relative;
+                left: 31%;
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .heading {
+                color: rgb(151, 124, 172);
+                position: relative;
+                left: 31%;
+                font-size: 32px;
+            }
+             ::-webkit-input-placeholder {
+                font-size: 15px;
+                /*padding-left: 10px;*/
+                position: relative;
+                top: 10px;
+                text-align: center;
+            }
+             ::-moz-placeholder {
+                font-size: 15px;
+                /*padding-left: 10px;*/
+                position: relative;
+                top: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bodyContainer">
+        <h1 class="heading">Your List app</h1>
+        <div class="inputContainer">
+            <input class="inptstyle" id="input" type="text" placeholder="Add Something to the list!">
+
+             <ul id="myList"></ul>
+            <button type="button" class="clickbutton" onclick="clearall()"> Clear</button>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+      var todos = new Array;
+        function get_list() {
+            var todos_str = sessionStorage.getItem('todo');
+            if (todos_str !== null) {
+                todos = JSON.parse(todos_str);
+            }
+            return todos;
+        }
+
+
+
+        function add() {
+            var task = document.getElementById('input').value;
+
+            var todos = get_list();
+            todos.push(task);
+            sessionStorage.setItem('todo', JSON.stringify(todos));
+            return 0;
+        }
+
+
+
+
+
+
+        var x = 0;
+        document.getElementById('input').onkeydown = function(event) {
+                if (event.keyCode == 13) {
+                    validate();
+                }
+            }
+                //removing selected list items
+            function clearall() {
+                var tickmark = document.getElementsByClassName("ticklist");
+                var j;
+                console.log(tickmark.length);
+                for (j= 0; j <tickmark.length; j++) {
+                    while (tickmark[j].checked == true) {
+                        var liClicked1 = tickmark[j].parentElement;
+                        var parentUl = document.getElementById("myList");
+                        parentUl.removeChild(liClicked1);
+                        var todos = get_list();
+                        console.log( liClicked1.value);
+                            todos.splice(j,1);
+                            sessionStorage.setItem('todo', JSON.stringify(todos));
+                    }
+                }
+            }
+
+          //  function tells dynamically creating li elements
+            function createlist(node, inputText) {
+                //styling li element
+                node.className = "listingStyle";
+                //creating checkbox
+                createCheckbox(node)
+                    //taking input frome the input text adding to li value
+                var textnode = document.createTextNode(inputText);
+                node.appendChild(textnode);
+                // creating close mark after the li text
+                createSpan(node);
+                //horizontal line after each li element
+                var hrnode = document.createElement("HR");
+                node.appendChild(hrnode);
+                return node;
+            }
+
+            function createCheckbox(node) {
+                //creating tick mark before the li text
+                //var span1 = document.createElement("SPAN");
+                var tick = document.createElement("INPUT");
+                tick.name = "list";
+                tick.type = "checkbox";
+                tick.className = "ticklist";
+                //span1.appendChild(tick);
+                node.appendChild(tick);
+
+
+            }
+
+            function createSpan(node) {
+                var span2 = document.createElement("SPAN");
+                var close = document.createTextNode("\u00D7");
+                span2.className = "closelist";
+                var x=0;
+                span2.id = x;
+                span2.appendChild(close);
+                node.appendChild(span2);
+                x + 1;
+            }
+
+        function validate() {
+            add()
+                var inputText = document.getElementById("input").value;
+                // var listItem = [];
+                // localStorage.setItem("listItem", inputText);
+                if (inputText == "") {
+                    alert("Enter text");
+                } else {
+                    var node = document.createElement("LI");
+                    node = createlist(node, inputText); //craeting li element
+
+                    //after created list i.e node to its parent ul
+                    document.getElementById("myList").appendChild(node);
+
+                    //after adding to list clear the text inputs
+                    document.getElementById("input").value = "";
+
+                    //this is for remove element from the list when clicking close mark
+                    var closemark = document.getElementsByClassName("closelist");
+                    var i;
+                    for (i = 0; i < closemark.length; i++) {
+                        closemark[i].addEventListener('click',remove(i));                  
+                        
+                    }
+
+                }
+
+        }
+        function remove(i){
+        return function(){
+                          var id = i;
+                           //var id = this.getAttribute('id');
+                          var liClicked = this.parentElement;
+                          var parentUl = document.getElementById("myList");
+                          parentUl.removeChild(liClicked);
+                          var todos = get_list();
+                              todos.splice(id,1);
+                              sessionStorage.setItem('todo', JSON.stringify(todos));
+};
+}
+    </script>
+</body>
+
+</html>
