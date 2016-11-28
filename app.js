@@ -8,8 +8,12 @@
         age: 22
     },
     {
-        name:'xyx',
+        name:'pqr',
         age:22
+    },
+    {
+      name:'xyz',
+      age:22
     }
 ];
 })();
