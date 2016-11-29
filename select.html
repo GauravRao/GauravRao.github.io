@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Select</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="selectController">
+
+        <h2>Using ng-repeat</h2>
+        <select id="city" name="city" ng-model="data.model">
+            <option ng-repeat="option in data.availableOptions" value="{{option.id }}" ng-init="{{option}}">
+                {{option.name}}
+            </option>
+        </select>
+
+        <h2>Using ng-options</h2>
+        <select name="mySelect" ng-options="option.name for option in data.availableOptions track by option.id" ng-model="data.selectedOption"></select>
+        <script>
+            var app = angular.module('myApp', [])
+            app.controller('selectController', [
+                '$scope',
+                function($scope) {
+                    $scope.data = {
+                        model: null,
+                        availableOptions: [
+                            {
+                                id: '0',
+                                name: 'Mangaluru'
+                            }, {
+                                id: '1',
+                                name: 'Bengaluru'
+                            }, {
+                                id: '2',
+                                name: 'Mysore'
+                            }, {
+                                id: '3',
+                                name: 'Belgaum'
+                            }
+                        ],
+                        selectedOption: {
+                            id: '0'
+                        }
+                    };
+                }
+            ]);
+        </script>
+    </body>
+</html>

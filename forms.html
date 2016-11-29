@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+    </head>
+
+    <body>
+        <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+            <label>Username:<br>
+                <input type="text" name="user" ng-model="user" required>
+                <span style="color:red" ng-show="myForm.user.$touched && myForm.user.$invalid">
+                    <span ng-show="myForm.user.$error.required">Username is required.</span>
+                </span>
+
+            </label><br/><br/>
+            <label>Email:<br>
+                <input type="email" name="email" ng-model="email" required>
+                <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$invalid">
+                    <span ng-show="myForm.email.$error.required">Email is required.</span>
+                    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                </span>
+            </label><br/><br/>
+            <label>
+                <input type="submit" ng-disabled="myForm.user.$pristine || myForm.user.$invalid || myForm.email.$pristine || myForm.email.$invalid">
+            </label>
+
+        </form>
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('validateCtrl', function($scope) {
+                $scope.user = '';
+                $scope.email = '';
+            });
+        </script>
+
+    </body>
+</html>

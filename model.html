@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Model</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script type="text/javascript" src="angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="selectController" style="background-color:{{data.selectedOptions}}">
+            Choose your favourite colour:
+            <select ng-model="data.selectedOptions">
+                <option ng-repeat="option in data.availableOptions">
+                    {{ option.colour }}
+                </option>
+            </select>
+            <p>You selected:
+                {{ data.selectedOptions }}</p>
+        </div>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("selectController", function($scope) {
+                $scope.data = {
+                    selectedOptions: '',
+                    availableOptions: [
+                        {
+                            colour: "Red"
+                        }, {
+                            colour: "Green"
+                        }, {
+                            colour: "Blue"
+                        }, {
+                            colour: "Grey"
+                        }, {
+                            colour: "Gold"
+                        }, {
+                            colour: "Black"
+                        }
+                    ]
+                };
+            });
+        </script>
+
+    </body>
+</html>

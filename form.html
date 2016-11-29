@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Forms</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <form name="login" ng-controller="formController" ng-submit="validate(username,userPass)" class="css-form" novalidate>
+            <label for="#user">User Name:</label>
+            <input type="text" name="userName" value="" ng-model="username" required>
+            <span ng-show="login.user.$error.required">Username is required.</span><br/><br/>
+            <label for="#password">Password:</label>
+            <input type="password" name="passwd" value="" ng-model="userPass" required><br/><br/>
+            <input type="Submit" name="Submit" value="Submit"><br/><br/>
+            {{loginError}}
+        </form>
+        <style>
+            .ng-invalid.ng-dirty {
+                border-color: red;
+            }
+            .ng-valid.ng-dirty {
+                border-color: #78fa89;
+            }
+
+        </style>
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('formController', ['$scope',function($scope) {
+                    $scope.validate = function(username, password) {
+                        if (username === 'hello' && password === '1234') {
+                            $scope.user = username;
+                            alert('Welcome');
+                        } else {
+                            $scope.loginError = "Invalid username/password combination";
+                        }
+                    }
+                }
+            ]);
+        </script>
+    </body>
+</html>

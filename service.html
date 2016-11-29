@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Service</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="serviceController">
+            <p>Below message will be changed in 8 seconds!</p>
+            <p>{{ changeMessage }}</p>
+        </div>
+        <div ng-controller="customController">
+            <p>{{ today }}</p>
+        </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("serviceController", function($scope, $timeout) {
+                $scope.changeMessage = "Hello World";
+                $timeout(function() {
+                    $scope.changeMessage = "SEE YOU SOON";
+                }, 8000);
+            });
+            app.service("dateService", function() {
+                this.getDate = function() {
+                    t = Date();
+                    return t;
+                }
+            });
+            app.controller("customController", function($scope, dateService) {
+                $scope.today = dateService.getDate();
+            });
+        </script>
+
+    </body>
+</html>
