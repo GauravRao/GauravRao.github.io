@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Register Page</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script src="validate.js"></script>
+        <style media="screen">
+            .setHeight {
+                margin-top: 30px;
+            }
+            .setColor {
+                color: #fff;
+            }
+            .home {
+                height: 500px;
+                margin-top: 10px;
+                background-color: rgb(106, 96, 167);
+            }
+
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row home">
+                <div class=" col-sm-12 col-md-12 col-lg-12 offset-lg-3">
+                    <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate ng-submit="data.submit()">
+                        <div class="row setHeight">
+                            <div class=" col-lg-offset-2 col-md-offset-3 col-sm-5 col-md-5 col-lg-5 ">
+                                <input type="text" name="userName" ng-model="data.userName" required value="" ng-minlength="3" ng-maxlength="15" ng-pattern="/^[a-zA-Z]+$/" class="form-control" placeholder="User Name">
+                                <span style="color:red" ng-show="myForm.userName.$error.required && myForm.userName.$dirty">Username is required.<br/></span>
+                                <span style="color:red" ng-show="myForm.userName.$error.minlength || myForm.userName.$error.maxlength">The Name must be having 3-15 characters<br/></span>
+                                <span style="color:red" ng-show="myForm.userName.$error.pattern">Username should contain only alphabets<br/></span>
+                            </div>
+                        </div>
+                        <!-- End of Username  -->
+
+                        <div class="row setHeight">
+                            <div class="col-sm-5 col-md-5 col-lg-5 ">
+                                <input type="email" required name="email" value="" ng-model="data.email" ng-pattern="/^[a-zA-Z]+\w*@[a-zA_Z]+.in$/" class="form-control" placeholder="Email">
+                                <span style="color:red" ng-show="myForm.email.$error.required && myForm.email.$dirty ">Email is required</span>
+                                <!-- <span style="color:red" ng-show="myForm.email.$error.email">Invalid email address</span> -->
+                                <span style="color:red" ng-show="myForm.email.$error.pattern">Email should be of the format abc@xyz.in</span>
+                            </div>
+                        </div>
+                        <!-- End of email field  -->
+                        <div class="row setHeight">
+                            <div class="col-sm-5 col-md-5 col-lg-5 ">
+                                <input type="text" class="form-control" ng-minlength="14" ng-maxlength="14" name="phone" placeholder="Phone (+91-9876543210)" ng-model="data.phone" ng-required="true" ng-pattern="/^\+\d{2}-\d{10}$/">
+                                <span style="color:red" ng-show="myForm.phone.$error.required && myForm.phone.$dirty">Phone Number is required</span>
+                                <span style="color:red" ng-show="myForm.phone.$error.pattern">Phone Number should be of form +91-9876543210</span>
+                            </div>
+                        </div>
+                        <!-- End of Phone Number field -->
+                        <div class="row setHeight">
+                            <div class="col-sm-5 col-md-5 col-lg-5  ">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6  ">
+                                        <label class="custom-control custom-radio setColor ">
+                                            <input type="radio" ng-model="data.gender" name="name" value="Male" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Male</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6  ">
+                                        <label class="custom-control custom-radio setColor">
+                                            <input type="radio" ng-model="data.gender" name="name" value="Female" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Female</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row setHeight" ng-controller="selectController">
+                            <div class="col-sm-5 col-md-5 col-lg-5  ">
+                                <select class="form-control" name="mySelect" ng-options="option for option in availableOptions track by option" ng-model="selectValue" required></select>
+                            </div>
+                        </div>
+
+                        <div class="row setHeight">
+                            <div class="col-sm-5 col-md-5 col-lg-5 setColor">
+                                <div class="row">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="checker" ng-model="data.checkVal1" value="Option 1" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Option 1</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="checker1" ng-model="data.checkVal2" value="Option 2" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Option 2</span>
+                                        </label >
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="checker2" ng-model="data.checkVal3" value="Option 3" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Option 3</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="checker3" ng-model="data.checkVal4" value="Option 4" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Option 4</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row setHeight">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <input
+                                    class="btn btn-md btn-success "
+                                    type="submit"
+                                    name="submitBtn"
+                                    ng-disabled="myForm.data.userName.$pristine || myForm.data.userName.$invalid || myForm.email.$pristine || myForm.email.$invalid ||myForm.phone.$pristine || myForm.phone.$invalid "
+                                    value="Submit">
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <input class="btn btn-md btn-success " type="reset" ng-click="data.reset()" name="resetBtn" value="Reset">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    </body>
+</html>
