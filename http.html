@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <script src="angular.min.js"></script>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <h1>{{value}}</h1>
+            <h1>{{status}}</h1>
+            <h1>{{conf}}</h1>
+        </div>
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope, $http) {
+                $http.get('http://192.168.2.147:448/api/v1/user/{email}').then(function(response) {
+                    $scope.value = response.data;
+                    $scope.status = response.statusText;
+                    $scope.conf = response.config;
+                });
+            });
+        </script>
+
+    </body>
+</html>

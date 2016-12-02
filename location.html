@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <body>
+
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <p>The url of this page is:</p>
+            <h3>{{myUrl}}</h3>
+            <p>The Protocol of this page is:</p>
+            <h3>{{myProtocol}}</h3>
+            <p>The Port  used in this page is:</p>
+            <h3>{{myPort}}</h3>
+            <p>The host of this page is:</p>
+            <h3>{{myHost}}</h3>
+        </div>
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope, $location) {
+                $scope.myUrl = $location.absUrl();
+                $scope.myProtocol = $location.protocol();
+                $scope.myPort = $location.port();
+                $scope.myHost = $location.host();
+
+            });
+        </script>
+
+    </body>
+</html>
