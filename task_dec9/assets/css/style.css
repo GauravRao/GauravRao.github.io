@@ -1,0 +1,30 @@
+.active {
+    background-color: lightblue;
+}
+
+.bg-info {
+    width: 102%;
+    margin-left: -1%;
+}
+
+.setHeight {
+    margin-top: 30px;
+}
+
+.setColor {
+    color: #fff;
+}
+
+.home {
+    height: 600px;
+    background-color: rgb(106, 96, 167);
+}
+
+.nav-item {
+    text-align: center;
+    width: 10%;
+}
+
+.setPosition {
+    margin-top: 60px;
+}

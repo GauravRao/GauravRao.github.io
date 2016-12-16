@@ -1,0 +1,55 @@
+<div class="row home">
+    <div class=" col-sm-12 col-md-12 col-lg-12 setPosition">
+        <h1 class="setColor">
+                Contact-Us
+        </h1>
+        <form name="myForm" novalidate ng-submit="data.submit()">
+            <div class="row setHeight">
+                <div class=" col-lg-offset-2 col-md-offset-3 col-sm-5 col-md-5 col-lg-5 ">
+                    <input type="text" name="userName" ng-model="data.userName" required value="" ng-minlength="3" ng-maxlength="15" ng-pattern="/^[a-zA-Z]+$/" class="form-control" placeholder="User Name">
+                    <span style="color:red" ng-show="myForm.userName.$error.required && myForm.userName.$dirty">Username is required.<br/></span>
+                    <span style="color:red" ng-show="myForm.userName.$error.minlength || myForm.userName.$error.maxlength">The Name must be having 3-15 characters<br/></span>
+                    <span style="color:red" ng-show="myForm.userName.$error.pattern">Username should contain only alphabets<br/></span>
+                </div>
+            </div>
+            <!-- End of Username  -->
+
+            <div class="row setHeight">
+                <div class="col-sm-5 col-md-5 col-lg-5 ">
+                    <input type="email" required name="email" value="" ng-model="data.email" ng-pattern="/^[a-zA-Z]+\w*@[a-zA_Z]+.in$/" class="form-control" placeholder="Email">
+                    <span style="color:red" ng-show="myForm.email.$error.required && myForm.email.$dirty ">Email is required</span>
+                    <!-- <span style="color:red" ng-show="myForm.email.$error.email">Invalid email address</span> -->
+                    <span style="color:red" ng-show="myForm.email.$error.pattern">Email should be of the format abc@xyz.in</span>
+                </div>
+            </div>
+            <!-- End of email field  -->
+            <div class="row setHeight">
+                <div class="col-sm-5 col-md-5 col-lg-5 ">
+                    <input type="text" class="form-control" ng-minlength="14" ng-maxlength="14" name="phone" placeholder="Phone (+91-9876543210)" ng-model="data.phone" ng-required="true" ng-pattern="/^\+\d{2}-\d{10}$/">
+                    <span style="color:red" ng-show="myForm.phone.$error.required && myForm.phone.$dirty">Phone Number is required</span>
+                    <span style="color:red" ng-show="myForm.phone.$error.pattern">Phone Number should be of form +91-9876543210</span>
+                </div>
+            </div>
+            <!-- End of Phone Number field -->
+            <div class="row setHeight">
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                    <input type="date" class="form-control" name="dob" ng-model="data.date" placeholder="yyyy-MM-dd" required/>
+                    <span style="color:red" ng-show="myForm.dob.$error.required && myForm.dob.$dirty ">D.O.B is required</span>
+                </div>
+            </div>
+            <div class="row setHeight">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <input
+                        class="btn btn-md btn-success "
+                        type="submit"
+                        name="submitBtn"
+                        ng-disabled="myForm.data.userName.$pristine || myForm.data.userName.$invalid || myForm.email.$pristine || myForm.email.$invalid ||myForm.phone.$pristine || myForm.phone.$invalid "
+                        value="Submit">
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <input class="btn btn-md btn-success " type="reset" ng-click="data.reset()" name="resetBtn" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

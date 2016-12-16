@@ -1,0 +1,40 @@
+{
+    "software": [{
+        "id": 0,
+        "name": "Atom"
+    }, {
+        "id": 1,
+        "name": "Ms-Word"
+    }, {
+        "id": 2,
+        "name": "Photoshop"
+    }, {
+        "id": 3,
+        "name": "Redmine"
+    }, {
+        "id": 4,
+        "name": "Git Hub"
+    }, {
+        "id": 5,
+        "name": "Bit Bucket"
+    }],
+    "hardware": [{
+        "id": 0,
+        "name": "Printer"
+    }, {
+        "id": 1,
+        "name": "Monitor"
+    }, {
+        "id": 2,
+        "name": "Motherboard"
+    }, {
+        "id": 3,
+        "name": "Hard Disk"
+    }, {
+        "id": 4,
+        "name": "Driver"
+    }, {
+        "id": 5,
+        "name": "Projector"
+    }]
+}
