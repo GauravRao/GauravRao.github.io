@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Moringo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/customer.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+        <script src="js/customer.js"></script>
+    </head>
+    <body>
+        <header class="header navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <ul class="social-icons" style="list-style-type:none;">
+                        <li>
+                            <a href="https://www.facebook.com/moringo.organic" target="_blank" class="facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/moringoorganics" target="_blank" class="twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/moringoorganics" target="_blank" class="linkedin"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/Moringoorganics" target="_blank" class="youtube"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.pinterest.com/moringoorganics/" class="pinterest"></a>
+                        </li>
+                        <li>
+                            <a href="http://vimeo.com/moringoorganics" target="_blank" class="vimeo"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <ul class="top-contact-info" style="list-style-type:none;">
+                        <li class="login-link">
+                            <a href="http://www.mymoringo.com/login.aspx" target="_blank">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo-Div">
+
+                    <!-- Logo -->
+                    <a class="header-logo" href="#home"><img src="images/logo-new.png" alt="Moringo"></a>
+                </div>
+            </div>
+        </header>
+        <!-- Main Container -->
+        <div class="container-fluid cart-container-first ">
+            <!-- <form action=""> -->
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="product-remove">&nbsp;</th>
+                            <th class="product-thumbnail">Image</th>
+                            <th class="product-name">Product</th>
+                            <th class="product-price">Price</th>
+                            <th class="product-quantity col-sm-2 col-md-2 col-xs-2 col-lg-2">Quantity</th>
+                            <th class="product-subtotal">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr class="cart_item">
+                            <td class="product-remove">
+                                <span class="close-Cart" style="cursor:pointer">&times;</span>
+                            </td>
+                            <td class="product-thumbnail col-sm-2 col-xs-2 col-md-2 col-lg-1">
+                                <img src="images/1.png" alt="" class="image-control_Cart">
+                            </td>
+
+                            <td class="product-name">
+                                <span>Sample Product Model
+                                </span>
+                            </td>
+
+                            <td class="product-price">
+                                <span class="">$385.00</span>
+                            </td>
+
+                            <td class="col-sm-4 col-md-4 col-xs-4 col-lg-2">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn data-dwn">
+                                        <button class="btn btn-default btn-sm buttonQuantityCart" data-dir="dwn">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1" min="-10" max="40">
+                                    <span class="input-group-btn data-up">
+                                        <button class="btn btn-default btn-sm buttonQuantityCart" data-dir="up">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td class="product-subtotal">
+                                <span>$385.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="actions">
+                                <div class=" col-sm-4 col-xs-4 col-md-2 col-lg-3">
+                                    <input type="text" name="coupon_code" class="form-control" placeholder=" Coupon code">
+                                </div>
+                                <input type="submit" class="btn btn-md btnColor" name="apply_coupon" value="Apply Coupon" clicked="true">
+                                <input type="submit" class="btn btn-md updateBtn" name="update_cart" value="Update Cart">
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- </form> -->
+        </div>
+        <div class="container cart-container-second">
+            <div class="row">
+                <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6 Cart_total-cart">
+                    <span>Cart Totals</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <table cellspacing="0" class="col-sm-6 col-xs-6 col-md-6 col-lg-6 table-responsive shipping-table ">
+                    <tr class="cart-subtotal">
+                        <th>Subtotal</th>
+                        <td data-title="Subtotal" class="cart-calculate-col2">
+                            <span class="amount">$385.00</span>
+                        </td>
+                    </tr>
+
+                    <tr class="shipping">
+                        <th>Shipping</th>
+                        <td data-title="Shipping" class="cart-calculate-col2">
+                            <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_legacy_local_delivery" value="legacy_local_delivery" class="shipping_method" checked="checked"/>
+                            <label for="shipping_method_0_legacy_local_delivery">Local Delivery</label><br/>
+                            <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_legacy_local_pickup" value="legacy_local_pickup" class="shipping_method"/>
+                            <label for="shipping_method_0_legacy_local_pickup">Local Pickup</label><br/>
+                            <span>Calculate Shipping</span>
+                        </td>
+                    </tr>
+                    <tr class="order-total">
+                        <th>Total</th>
+                        <td data-title="Total" class="cart-calculate-col2">
+                            <strong>
+                                <span class="total-amount-cart">$385.00</span>
+                            </strong>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 proceed-payment">
+                    <button type="submit" name="button" class="btn btn-md btnColor">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+        <!-- End of Main container -->
+    </body>
+</html>

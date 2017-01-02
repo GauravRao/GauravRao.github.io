@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Maringo Registraion Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/app.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-container">
+        <div class="formDiv">
+
+            <h1 class="form-title">DISTRIBUTOR REGISTRATION FORM</h1>
+            <div>
+                <form role="form">
+                    <div class="row form-group">
+                        <p class="individual-title">Sponsor Information</p>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field forResp" placeholder="Sponsor First Name">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field" placeholder="Sponsor Last Name">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field forResp" placeholder="Tree Placement">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field" placeholder="Sponsor IBO">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <p class="individual-title">Personal Information</p>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field forResp" placeholder="First Name">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field " placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field forResp" placeholder="Father Name">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <select class="form-control input-field styled-select">
+                                        <option value="" disabled selected>Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <!-- <option value="Others">Others</option> -->
+                                    </select>
+                            <span class="customCaretCls"><img src="images/dropdown.png" /></span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input class="form-control input-field forResp" type="email" placeholder="Email" />
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <!-- Add +91 or +10 or other number here -->
+                            <!-- <div class="input-group ">
+                                <span class="input-group-addon">
+                                        <span class="placeholderCls" disabled aria-label="...">
+                                            +91
+                                        </span>
+                                </span>
+                                <input type="text" class="form-control input-field" aria-label="..." placeholder="Phone Number">
+                            </div> -->
+                            <input class="form-control input-field " type="text" placeholder="Phone Number" />
+
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input class="form-control input-field forResp" type="email" placeholder="PAN No / Tax ID" />
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <div class="input-group " >
+                                <span class="input-group-addon " >
+                                        <span class="placeholderCls" disabled aria-label="...">
+                                            <!-- Add +91 or +10 or other number here --><span  class="datepicker-trigger glyphicon glyphicon-calendar"></span>
+                                </span>
+                                </span>
+                                <input type="text" class="form-control input-field" aria-label="..." placeholder="Date of Birth" id="date-picker">
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <div class="row form-group">
+                        <P class="individual-title">User Account Information</P>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field myInputCls forResp" placeholder="User Name">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="password" class="form-control input-field myInputCls" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <P class="individual-title">Billing Address Information</P>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control forResp input-field" placeholder="Address 1">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field " placeholder="Address 2">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                            <select class="form-control input-field styled-select forResp">
+                                <option value="" disabled selected>Country</option>
+                                <option value="Meeting">Algeria</option>
+                                <option value="Presentation">Burmah</option>
+                                <option value="Others">India</option>
+                                <option value="Others">Netherlands</option>
+                                <option value="Others">Sweden</option>
+                            </select>
+                            <span class="customCaretCls"><img src="images/dropdown.png" /></span>
+
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <select class="form-control input-field styled-select">
+                                    <option value="" disabled selected>State</option>
+                                    <option value="Meeting">AAAAA</option>
+                                    <option value="Presentation">BBBB</option>
+                                    <option value="Others">CCCC</option>
+                                    <option value="Others">DDDDD</option>
+                                    <option value="Others">EEEEE</option>
+                                </select>
+                            <span class="customCaretCls"><img src="images/dropdown.png" /></span>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <!-- <select class="form-control input-field myInputCls forResp styled-select">
+                                <option value="" disabled selected>City</option>
+                                <option value="Meeting">aaaaa</option>
+                                <option value="Presentation">bbbb</option>
+                                <option value="Others">cccc</option>
+                                <option value="Others">ddddd</option>
+                                <option value="Others">eeee</option>
+                            </select> -->
+                            <!-- <span class="customCaretCls"><img src="images/dropdown.png" /></span> -->
+                            <input type="text" class="form-control input-field myInputCls" placeholder="City">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field myInputCls" placeholder="Postal Code">
+                        </div>
+                    </div>
+                    <!-- <div class="checkbox-div">
+                        <label class="checkbox-label">
+                                <input type="checkbox" class="customCheckCls" />
+                                <span class="CheckLableCls">Check here if Billing Address is different than Shipping Address</span>
+                        </label>
+                    </div> -->
+                    <div class="row form-group">
+                        <P class="individual-title">Bank Account Information</P>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field forResp" placeholder="Bank Name">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field " placeholder="Bank Branch">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field forResp" placeholder="Account Name">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field " placeholder="Account Number">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <!-- <input type="text" class="form-control input-field myInputCls " placeholder="Account Type"> -->
+                            <select class="form-control input-field forResp styled-select">
+                                <option value="" disabled selected>Account Type</option>
+                                <option value="Savings">Savings</option>
+                                <option value="Salary">Salary</option>
+                                <option value="Current">Current</option>
+
+                            </select>
+                            <span class="customCaretCls"><img src="images/dropdown.png" /></span>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                            <input type="text" class="form-control input-field myInputCls" placeholder="IFSC Code">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- End of form  -->
+
+
+    </div>
+    <div class="container my-image-container clearfix">
+
+        <div class="imagesDiv ">
+            <div class="images-set">
+                <label>
+                <ul style="list-style-type:none;">
+                    <li class="col-lg-1 col-sm-1 col-ms-1 col-xs-1">
+                        <!-- <input type="radio" class="radioBtnCls radio" name="selectImg" value="1800.00" checked=""/>
+                        <label for="selectImg"></label> -->
+
+                <div class="checkbox-main-div "><label><input type="radio" class="checkbox input-checkbox " name="selectImg" value="1800.00" checked=""><span class="checkbox-img radioBtnCls"></span></label></div>
+
+                </li>
+                <li class="col-lg-6 col-sm-6 col-ms-6 col-xs-6">
+                    <img class=" imgResponsiveCls" src="images/1.png" alt="error while displaying the image." />
+                </li>
+                <li class="col-lg-5 col-sm-5 col-ms-5 col-xs-5">
+                    <img class=" imgDescResCls" src="images/1a.png" alt="error while displaying the image." />
+                </li>
+
+                </ul>
+                </label>
+            </div>
+            <div class="images-set">
+                <label>
+                <ul style="list-style-type:none;">
+                    <li class="col-lg-1 col-sm-1 col-ms-1 col-xs-1">
+                        <!-- <input  type="radio" class="radioBtnCls radio" name="selectImg" value="5800.00" />
+                        <label for="selectImg"></label> -->
+                <div class="checkbox-main-div "><label><input type="radio" class="checkbox input-checkbox" name="selectImg" value="5800.00"><span class="checkbox-img radioBtnCls"></span></label></div>
+                <!-- <input id="option" type="radio" name="selectImg" value="5800.00" >
+                        <label for="option" class="radioBtnCls"><span ><span></span></span></label> -->
+                </li>
+                <li class="col-lg-6 col-sm-6 col-ms-6 col-xs-6">
+                    <img class=" imgResponsiveCls" src="images/2.png" alt="error while displaying the image." />
+                </li>
+                <li class="col-lg-5 col-sm-5 col-ms-5 col-xs-5">
+                    <img class=" imgDescResCls" src="images/2a.png" alt="error while displaying the image." />
+                </li>
+
+                </ul>
+                </label>
+            </div>
+            <div class="images-set">
+                <label>
+                <ul style="list-style-type:none;">
+                    <li class="col-lg-1 col-sm-1 col-ms-1 col-xs-1">
+                        <!-- <input type="radio" class="radioBtnCls" name="selectImg" value="7200.00" /> -->
+                        <div class="checkbox-main-div "><label><input type="radio" class="checkbox input-checkbox " name="selectImg" value="7200.00" ><span class="checkbox-img radioBtnCls"></span></label></div>
+
+            </li>
+            <li class="col-lg-6 col-sm-6 col-ms-6 col-xs-6">
+                <img class=" imgResponsiveCls" src="images/3.png" alt="error while displaying the image." />
+            </li>
+            <li class="col-lg-5 col-sm-5 col-ms-5 col-xs-5">
+                <img class=" imgDescResCls" src="images/3a.png" alt="error while displaying the image." />
+            </li>
+            </ul>
+            </label>
+        </div>
+        <div class="images-set">
+            <label>
+                <ul style="list-style-type:none;">
+                    <li class="col-lg-1 col-sm-1 col-ms-1 col-xs-1">
+                        <!-- <input type="radio" class="radioBtnCls" name="selectImg" value="15200.00" /> -->
+                        <div class="checkbox-main-div "><label><input type="radio" class="checkbox input-checkbox " name="selectImg" value="15200.00" ><span class="checkbox-img radioBtnCls"></span></label></div>
+
+        </li>
+        <li class="col-lg-6 col-sm-6 col-ms-6 col-xs-6">
+            <img class=" imgResponsiveCls" src="images/4.png" alt="error while displaying the image." />
+        </li>
+        <li class="col-lg-5 col-sm-5 col-ms-5 col-xs-5">
+            <img class=" imgDescResCls" src="images/4a.png" alt="error while displaying the image." />
+        </li>
+        </ul>
+        </label>
+    </div>
+    </div>
+    <!-- The Bottom part -->
+    <div class="delivery-div row">
+
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12  payment-col-ele1">
+            <div class="inner-payment-div">
+                <p class="headingCls">Delivery Mode </p>
+                <span style="margin-right:14%;"><label><div class="checkbox-main-div custom-style"><label><input type="radio" class="checkbox input-checkbox " name="deliverymode"  value="courier" ><span class="checkbox-img"></span></label>
+            </div>&nbsp;<span class="labelCls">Courier</span></label>
+            </span>
+            <label><div class="checkbox-main-div custom-style"><label><input type="radio" class="checkbox input-checkbox " name="deliverymode" value="self" ><span class="checkbox-img"></span></label></div>&nbsp;<span class="labelCls">Self</span></label>
+    </div>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12  payment-col-ele2">
+        <div class="inner-payment-div">
+            <p class="headingCls">Payment Mode</p>
+            <span style="margin-right:8%;"><label><div class="checkbox-main-div custom-style"><label><input type="radio" class="checkbox input-checkbox " name="paymentmode"  value="debit card" ><span class="checkbox-img"></span></label>
+        </div>&nbsp;<span class="labelCls">Debit Card</span></label>
+        </span>
+        <label><div class="checkbox-main-div custom-style"><label><input type="radio" class="checkbox input-checkbox " name="paymentmode" value="credit card" ><span class="checkbox-img "></span></label></div>&nbsp;<span class="labelCls">Credit Card</span></label>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+        <p class="amountTitleCls">&#8377; <span class="amountCls">1800.00</span></p>
+    </div>
+    <div class="row">
+        <h2 style="font-size:18px;padding-left:15px;">Note :</h2>
+        <ul class="listsCls" style="padding-left:35px;">
+            <li>
+                1% Transaction charge for Debit cards charged by Payment Gateway
+            </li>
+            <li>
+                2.5% Transaction charge for Credit cards & Net Banking charged by Payment Gateway
+            </li>
+        </ul>
+    </div>
+    <div class="row" style="padding-left:2%;padding-top:2%;">
+        <label><input type="checkbox" class="customCheckBoxCls"/>
+                        <span style="font-size:14px;font-weight:lighter"> &nbsp;I agree that I have read and understand the <a href="#" class="anchorCls">Terms and Conditions</a> and the <a href="#" class="anchorCls">Privacy Policies </a>of  the Distributor agreement. By checking this box I submit that I am over 18 years of age and that I am of sound mind and judgement.</span>
+            </label>
+    </div>
+    <div class="row btnRowCls">
+        <div>
+            <button class="btn customButtonCls">PROCEED TO PAY</button>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

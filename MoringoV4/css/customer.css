@@ -1,0 +1,501 @@
+.shipping-addrs-div {
+    display: none;
+}
+
+
+/* custReg css style start continued */
+
+.spacingline {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.viewgrid {
+    background-color: #94c300;
+    border-radius: 0px;
+    width: 40.02px;
+    height: 34px;
+}
+
+.glyphicon {
+    padding-right: 14px !important;
+    color: white !important;
+    float: right !important;
+    top: 2px !important;
+    left: 32%;
+}
+
+.listview {
+    background-color: black;
+    border-radius: 0px;
+    width: 40.02px;
+    height: 34px;
+}
+
+.menuitemcol {
+    padding-right: 14px;
+    color: white;
+    float: right;
+    top: 9px;
+}
+
+.imagebox {
+    border-radius: 0px !important;
+    border: 1px solid #ddd;
+    height: 280px;
+    width: 226.66px;
+    padding: 0!important;
+}
+
+.imagebox:hover .overlay {
+    opacity: 0.6;
+    background-color: rgb(128, 128, 128);
+    display: block;
+    height: 280px;
+    width: 226.66px;
+    position: absolute;
+    cursor: pointer!important;
+}
+
+.imagebox:hover .itemname {
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    margin-left: 16%;
+    text-align: center;
+}
+
+.imagebox:hover .itemcostprice>strong {
+    color: white;
+}
+
+.imagebox:hover .itemcostprice {
+    position: absolute;
+    z-index: 10000;
+    color: #94c300;
+    margin-left: 32%;
+    margin-top: 15%;
+    font-weight: bold;
+}
+
+.overlay {
+    display: none;
+}
+
+.itemname {
+    text-align: center;
+    margin-top: 6%;
+}
+
+.itemcostprice {
+    text-align: center;
+    margin-top: 2%;
+    color: #94c300;
+    font-size: 18px;
+}
+
+.imagebox:hover .itemname:hover {
+    color: #94c300;
+}
+
+.hideDivs {
+    display: none;
+}
+
+.imagebottom {
+    height: 72.75px !important;
+    width: 92px !important;
+    margin-bottom: 6px !important;
+    border-radius: 0px !important;
+}
+
+.anchorcol:visited {
+    color: black;
+}
+
+.content {
+    font-size: 22px;
+    color: #333333;
+    margin-top: 250px;
+}
+
+.contentava {
+    color: #94c300;
+    font-size: 14px;
+}
+
+.product {
+    color: #94c300;
+    padding: 0 6px;
+}
+
+.quick-overview {
+    font-size: 16px;
+    color: #999999;
+    font-family: Oswald !important
+}
+
+.overview {
+    color: #999999;
+    line-height: 22px;
+    /*text-align: justify;
+   text-justify: inter-word;*/
+    padding-bottom: 18px;
+    width: 100%;
+}
+
+.social-share {
+    line-height: 14px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+/*.product-summary-bottom {
+    margin-bottom: 10px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+    width: 113%;
+}*/
+
+.share-title {
+    color: #444;
+    text-transform: uppercase;
+    padding-right: 0px;
+}
+
+.social-share a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 11.2px;
+    color: #898989;
+    font-size: 16px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.imageview {
+    height: 60px !important;
+}
+
+.single_add_to_cart_button {
+    min-width: 50px;
+    padding: 0 25px 0 40px;
+    font-size: 15px;
+}
+
+#rcorners2 {
+    color: #fff;
+    background-color: #222222;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    padding: 10px;
+    width: 140px;
+    height: 52px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -o-border-radius: 50px;
+    -ms-border-radius: 50px;
+    font-size: 14px;
+    left: 53%;
+    top: -44px;
+}
+
+.glyphicon {
+    margin: -3px;
+}
+
+#rcorners2:hover {
+    background-color: #94c300;
+    color: #fff;
+}
+
+.cartbutton, u:visited {
+    color: white;
+    text-decoration: none !important;
+}
+
+.productlist {
+    margin-bottom: 10px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
+input[type="number"] {
+    position: relative;
+    border: 1px solid #BBB;
+    color: #000;
+    outline: none;
+    height: 0px;
+    width: 92px;
+    padding: 20px;
+    line-height: 40px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 349px) {
+    body {
+        overflow-x: hidden;
+    }
+    .imagebox {
+        width: 100%;
+        height: 338px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 277.66px;
+        height: 338px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 18%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 34%;
+        margin-top: 13%;
+    }
+    /*.content,.contentava,.quick-overview,.overview,.social-share,.product-summary-bottom {
+  margin-left:-10px;
+}*/
+    .social-share a {
+        padding: 0px 15px;
+        margin-left: -10px;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -5% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+    .content {
+        font-size: 22px;
+        color: #333333;
+        margin-top: 249px;
+        margin-left: -68px;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+    .imagebox {
+        width: 100%;
+        height: 385px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 317.66px;
+        height: 385px;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 36%;
+        margin-top: 13%;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 22%;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -5% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+    .content {
+        font-size: 22px;
+        color: #333333;
+        margin-top: 249px;
+        margin-left: -68px;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 449px) {
+    .imagebox {
+        width: 100%;
+        height: 390px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 329.66px;
+        height: 388px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 23%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 36%;
+        margin-top: 13%;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -5% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 500px) {
+    .imagebox {
+        width: 100%;
+        height: 450px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 392.66px;
+        height: 448px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 25%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 37%;
+        margin-top: 12%;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -5% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 549px) {
+    .imagebox {
+        width: 100%;
+        height: 500px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 442.66px;
+        height: 498px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 29.5%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 39%;
+        margin-top: 11%;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -5% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+    .imagebox {
+        width: 100%;
+        height: 552px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 492.66px;
+        height: 550px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 31.5%;
+        margin-top: 6%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 40%;
+        margin-top: 11%;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -3% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width:649px) {
+    .imagebox {
+        width: 100%;
+        height: 616px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 557.66px;
+        height: 614px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 33%;
+        margin-top: 6%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 42%;
+        margin-top: 11%;
+    }
+    .cart-container-second {
+        /*max-width: 890px;*/
+        margin-left: -3% !important;
+        color: black;
+        padding: 25px 42px !important;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width:700px) {
+    .imagebox {
+        width: 100%;
+        height: 654px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 591.66px;
+        height: 651px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 34%;
+        margin-top: 6%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 42%;
+        margin-top: 11%;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width:767px) {
+    .imagebox {
+        width: 100%;
+        height: 738px;
+        margin-top: -6px;
+    }
+    .imagebox:hover .overlay {
+        width: 667.66px;
+        height: 736px;
+    }
+    .imagebox:hover .itemname {
+        margin-left: 35%;
+        margin-top: 5.5%;
+    }
+    .imagebox:hover .itemcostprice {
+        margin-left: 43%;
+        margin-top: 10%;
+    }
+}
+
+.product_detail .product-images .product-images-container .slick-slider.product-responsive-thumbnail .slick-prev, .product_detail .slider_img_productd .product-images .product-images-container .slick-slider.product-responsive-thumbnail .slick-next {
+    z-index: 0 !important;
+}
+
+.cart {
+    position: absolute;
+    left: 46%;
+    bottom: -2px;
+}
+
+.regCustContainer {
+    margin-left: 23%;
+}

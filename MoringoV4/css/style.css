@@ -1,0 +1,899 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Cormorant Garamond', serif;*/
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: top 70px center;
+    /*background-attachment: fixed;
+    background-size: cover;*/
+}
+
+.my-container {
+    max-width: 820px;
+    background-color: #292c33;
+    /*background-color: black;*/
+    color: #ddd;
+    margin-top: 230px;
+    padding: 25px 42px !important;
+}
+
+.formDiv {
+    /*padding: 25px;*/
+    font-weight: lighter;
+}
+
+.input-group-addon {
+    border-radius: 0px !important;
+}
+
+.individual-title {
+    padding-top: 16px;
+    padding-bottom: 2px;
+    font-size: 22px;
+    padding-left: 15px;
+    font-weight: 300;
+    /*font-style:oblique;*/
+}
+
+.input-field {
+    /*width: 340px !important;*/
+    height: 47px !important;
+    font-size: 18px !important;
+    border-radius: 0px !important;
+}
+
+.first-col {
+    /*padding-left: 0px !important;*/
+    padding-right: 28px !important;
+}
+
+.sec-col {
+    /*float: right !important;*/
+    padding-left: 28px !important;
+    /*padding-right: 0px !important;*/
+}
+
+.input-field-dob {
+    /*width: 300px !important;*/
+    height: 47px !important;
+    font-size: 18px !important;
+    border-radius: 0px !important;
+}
+
+.images-set {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.my-image-container {
+    max-width: 820px;
+    background-color: #f5f5f5 !important;
+    padding: 30px 40px !important;
+    margin-bottom: 60px;
+}
+
+.radioBtnCls {
+    position: absolute;
+    /*background-color: #eee;*/
+    /*opacity: .5;*/
+    width: 20px;
+    height: 20px;
+    top: 190px;
+    /*left: -20px;*/
+}
+
+.radioBtnCls:hover {
+    /*opacity: 1;*/
+}
+
+.payment-col-ele1 {
+    /*background: #fff;*/
+    /*padding: 1%;*/
+    /*border: 1px solid lightgrey;*/
+    /*width: 50%;*/
+}
+
+.payment-col-ele2 {
+    /*background: #fff;*/
+    /*padding: 1%;*/
+    /*width: 50%;*/
+    /*border: 1px solid lightgrey;*/
+}
+
+.inner-payment-div {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid lightgrey;
+}
+
+.amountTitleCls {
+    font-size: 28px;
+    text-align: center;
+}
+
+.btnRowCls {
+    margin: auto !important;
+    margin-left: 20% !important;
+    margin-top: 4% !important;
+    margin-bottom: 2%;
+}
+
+.customButtonCls, .customButtonCls:hover {
+    font-size: 22px !important;
+    margin: auto;
+    width: 475px;
+    height: 60px;
+    text-align: center;
+    padding: 12px 12px;
+    background-color: #88ad3e;
+    color: #fff !important;
+}
+
+.form-title {
+    margin-top: 5px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.checkbox-div {
+    padding-top: 15px;
+}
+
+.customCheckCls {
+    height: 17px;
+    width: 17px;
+}
+
+.CheckLableCls {
+    font-size: 17px;
+}
+
+.checkbox-label {
+    font-size: 16px;
+    color: #ddd;
+    font-weight: 500;
+    /*float: right;*/
+}
+
+.labelCls {
+    font-size: 16px;
+    color: #888;
+    font-weight: 600;
+    margin-top: 2px;
+    float: right;
+}
+
+.radio-btn-cls {
+    width: 18px;
+    height: 18px;
+}
+
+.customCheckBoxCls {
+    width: 17px;
+    height: 16px;
+    margin-top: 0px;
+    float: left;
+    margin-right: 5px;
+}
+
+.headingCls {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.imgResponsiveCls {
+    margin: 20% 0;
+}
+
+.imgDescResCls {
+    width: 52%;
+    margin: 20% 0 0;
+}
+
+.firstImg {
+    width: 58%;
+    margin-left: 15%;
+}
+
+.thirdImg {
+    /*height: 300px;*/
+    margin-top: 32%;
+    margin-left: -10%;
+}
+
+.fourthImg {
+    margin-left: -5%;
+}
+
+.delivery-div {
+    margin: 25px 0px;
+}
+
+.styled-select {
+    appearance: none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    -o-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.customCaretCls {
+    pointer-events: none;
+    position: absolute;
+    display: inline;
+    /*width: 16px;
+    height: 8px;*/
+    font-size: 19px;
+    color: #88ad3e;
+    /* margin-bottom: 2%; */
+    top: 10px;
+    float: right;
+    right: 38px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 349px) {
+    .logo-Div {
+        padding-top: 0px !important;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .forResp {
+        margin-bottom: 15px;
+    }
+    .radioBtnCls {
+        top: 300px;
+    }
+    .btnRowCls {
+        margin-left: 0% !important;
+    }
+    .customButtonCls, .customButtonCls:hover {
+        width: 270px;
+        padding: 6px !important;
+    }
+    .my-image-container {
+        padding: 20px !important;
+    }
+    .payment-col-ele1 {
+        padding-bottom: 15px;
+    }
+    .login-link {
+        margin-left: -35px;
+    }
+    .first-col {
+        padding-right: 15px !important;
+    }
+    .sec-col {
+        padding-left: 15px !important;
+    }
+    .firstImg {
+        width: 70%;
+        margin-left: 5%;
+    }
+    .resp-text {
+        margin-left: 20%;
+        width: 80%;
+    }
+    .imgDescResCls {
+        margin: 0 0 0 20%;
+        width: 70%;
+    }
+    .responsive-div {
+        width: 88% !important;
+        /*padding-left: 0px !important;
+        padding-right: 0px !important;*/
+    }
+    .images-set {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .imgResponsiveCls {
+        margin-top: 12%;
+    }
+    .col-small-div {
+        width: 0px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+    body {
+        overflow-x: hidden;
+    }
+    .logo-Div {
+        padding-top: 10px !important;
+    }
+    .forResp {
+        margin-bottom: 15px;
+    }
+    .imgDescResCls {
+        margin: 0 0 0 30%;
+        width: 70%;
+    }
+    .responsive-div {
+        width: 77% !important;
+    }
+    .radioBtnCls {
+        top: 300px;
+    }
+    .firstImg {
+        width: 70%;
+    }
+    .resp-text {
+        margin-left: 30%;
+        width: 80%;
+    }
+    .btnRowCls {
+        margin-left: 0% !important;
+    }
+    .customButtonCls, .customButtonCls:hover {
+        width: 320px;
+        padding: 6px !important;
+    }
+    .my-image-container {
+        padding: 20px !important;
+    }
+    .payment-col-ele1 {
+        padding-bottom: 15px;
+    }
+    .login-link {
+        margin-left: -30px;
+    }
+    .first-col {
+        padding-right: 15px !important;
+    }
+    .sec-col {
+        padding-left: 15px !important;
+    }
+    .images-set {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .imgResponsiveCls {
+        margin-top: 12%;
+    }
+    .col-small-div {
+        width: 0px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+    .thirdImg {
+        margin-left: 5%;
+    }
+    .desc-text {
+        font-size: 10px;
+    }
+    .width-cls {
+        width: 130%;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 500px) {
+    body {
+        overflow-x: hidden;
+    }
+    .radioBtnCls {
+        top: 300px;
+    }
+    .forResp {
+        margin-bottom: 15px;
+    }
+    .payment-col-ele1 {
+        padding-bottom: 15px;
+    }
+    /*.imgResponsiveCls {
+        margin-left: -70px;
+    }*/
+    .btnRowCls {
+        margin-left: 0% !important;
+    }
+    .customButtonCls, .customButtonCls:hover {
+        width: 345px;
+    }
+    .first-col {
+        padding-right: 15px !important;
+    }
+    .sec-col {
+        padding-left: 15px !important;
+    }
+    .imgDescResCls {
+        margin: 0 0 0 30%;
+        width: 70%;
+    }
+    .responsive-div {
+        width: 77% !important;
+    }
+    .firstImg {
+        width: 70%;
+    }
+    .thirdImg {
+        margin-left: 5%;
+    }
+    .resp-text {
+        margin-left: 30%;
+        width: 80%;
+    }
+    .images-set {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .imgResponsiveCls {
+        margin-top: 12%;
+    }
+    .col-small-div {
+        width: 0px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+    .width-cls {
+        width: 135%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .forResp {
+        margin-bottom: 15px;
+    }
+    .payment-col-ele1 {
+        padding-bottom: 15px;
+    }
+    .imgResponsiveCls {
+        width: 260px;
+        margin-left: -15px;
+    }
+    .imgDescResCls {
+        width: 140px;
+        padding-right: 2%;
+    }
+    .btnRowCls {
+        margin-left: 2% !important;
+    }
+    .first-col {
+        padding-right: 15px !important;
+    }
+    .sec-col {
+        padding-left: 15px !important;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+    .forResp {
+        margin-bottom: 15px;
+    }
+    .payment-col-ele1 {
+        padding-bottom: 15px;
+    }
+    .btnRowCls {
+        margin-left: 10% !important;
+    }
+    .first-col {
+        padding-right: 15px !important;
+    }
+    .sec-col {
+        padding-left: 15px !important;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+    .forResp {
+        margin-bottom: 15px;
+    }
+    .payment-col-ele1 {
+        padding-bottom: 15px;
+    }
+    .btnRowCls {
+        margin-left: 15% !important;
+    }
+    .first-col {
+        padding-right: 15px !important;
+    }
+    .sec-col {
+        padding-left: 15px !important;
+    }
+}
+
+@media screen and (min-width: 970px) and (max-width: 980px) {
+    .btnRowCls {
+        margin-left: 14% !important;
+    }
+}
+
+
+/* css for custom Radio btn*/
+
+.checkbox-main-div input[type=radio] {
+    display: none;
+}
+
+.checkbox-main-div {
+    overflow: auto;
+    float: left;
+    padding-top: 43px;
+    padding-right: 13px;
+    margin-left: -30px;
+}
+
+.checkbox-main-div label {
+    float: left;
+    width: 17px;
+    height: 15px;
+}
+
+.checkbox-main-div label input {
+    top: -22px;
+}
+
+.checkbox-main-div label span {
+    cursor: pointer;
+    text-align: center;
+    height: 16px;
+    width: 48px;
+    display: block;
+    background: url(../images/unselect.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+.checkbox-main-div input:checked+span {
+    background: url(../images/select.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    color: #fff;
+}
+
+.custom-style {
+    overflow: hidden;
+    float: left;
+    padding-top: 5px;
+    padding-right: 2px;
+    margin-left: 0px;
+}
+
+.ui-datepicker-trigger {
+    display: inline;
+    padding: 0px;
+    padding-left: 3px;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.custom-glyph {
+    pointer-events: none;
+}
+
+
+/*header part css*/
+
+.header {
+    background: url(../images/header-bg.png) center top no-repeat;
+    left: 0px;
+    width: 100%;
+    height: 210px;
+    z-index: 2;
+}
+
+.social-icons {
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+}
+
+.social-icons li {
+    float: left;
+    margin-right: 6px;
+}
+
+.social-icons .facebook {
+    background: url(../images/social-icon.png) no-repeat 0 0;
+}
+
+.social-icons .twitter {
+    background: url(../images/social-icon.png) no-repeat -25px 0;
+}
+
+.social-icons .linkedin {
+    background: url(../images/social-icon.png) no-repeat -50px 0;
+}
+
+.social-icons .youtube {
+    background: url(../images/social-icon.png) no-repeat -75px 0;
+}
+
+.social-icons .pinterest {
+    background: url(../images/social-icon.png) no-repeat -100px 0;
+}
+
+.social-icon .vimeo {
+    background: url(../images/social-icon.png) no-repeat -125px 0;
+}
+
+.login-link {
+    margin-top: 12px;
+    font-size: 18px;
+    /*float: right;*/
+    text-align: center;
+}
+
+.login-link a, .login-link a:hover, .login-link a:focus {
+    color: #a6c430;
+    text-decoration: none;
+}
+
+.logo-Div {
+    padding-top: 15px;
+    padding-left: 50px !important;
+}
+
+input:focus {
+    border: 1px solid #a6c430 !important;
+}
+
+select:focus {
+    border: 1px solid #a6c430 !important;
+}
+
+.img-amnt-cls {
+    font-size: 38px;
+    margin-bottom: 0px;
+}
+
+.desc-text {
+    font-size: 12px;
+}
+
+.rupee-cls {
+    font-weight: lighter !important;
+}
+
+.text-cls {
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.width-cls {
+    font-weight: 600 !important;
+}
+
+.product_Descrp_RegCust {
+    font-size: 14px;
+}
+
+.custom-font {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    cursor: pointer;
+    display: block;
+    width: 8px;
+    left: 35%;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button:before, input[type=number]::-webkit-inner-spin-button:after {
+    content: "^";
+    position: absolute;
+    font-family: monospace;
+    /*background-color: rgb(148, 195, 0);*/
+}
+
+input[type=number]::-webkit-inner-spin-button:before {
+    top: 0px;
+    left: 10%;
+}
+
+input[type=number]::-webkit-inner-spin-button:after {
+    bottom: 0px;
+    -webkit-transform: rotate(180deg);
+}
+
+.quantity_label_RegCust {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+.cart-container-first {
+    max-width: 890px;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    margin-top: 230px;
+    padding: 25px 42px !important;
+}
+
+.cart-container-second {
+    /*max-width: 890px;*/
+    margin-left: 19% !important;
+    color: black;
+    padding: 25px 42px !important;
+}
+
+.image-control_Cart {
+    background-color: #fff;
+    width: 65%;
+    height: auto;
+    margin-left: 2%;
+}
+
+.close-Cart {
+    font-size: 25px;
+    position: relative;
+
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
+
+.buttonQuantityCart {
+    background-color: #ccc !important;
+}
+
+.buttonQuantityCart:hover {
+    background-color: rgb(148, 195, 0) !important;
+}
+
+.title_cart {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.second-row-gap-cart {
+    margin-top: 20px;
+}
+
+.second-row-gap-image-cart {
+    margin-top: 10px;
+}
+
+.third-row-cart {
+    margin-top: 15px;
+}
+
+.applyCouponStyle {
+    margin-left: -3%;
+    font-size: 14px;
+}
+
+.Cart_total-cart {
+    border-bottom: 1px solid #ececec;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.cart-calculate-col2 {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.shipping {
+    background-color: rgb(245, 245, 245);
+}
+
+.shipping-table {
+    border: 1px solid #ececec;
+}
+
+.shipping-table td {
+    padding: 10px 1% 10px 0;
+}
+
+.total-amount-cart {
+    color: rgb(148, 195, 0);
+    font-size: 25px;
+}
+
+.proceed-payment {
+    margin-top: 10px;
+    margin-left: -1.5%;
+}
+
+.quantity-show-numberType {
+    padding: 15px 20px !important;
+}
+
+.table-desc-style {
+    font-size: 14px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn-sm {
+    padding: 13px 0 !important;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border: none !important;
+}
+
+.spinner input {
+    text-align: right;
+    height: 40px;
+}
+
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 2%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.input-group-btn-vertical :hover {
+    background-color: rgb(148, 195, 0);
+}
+
+.input-group-btn-vertical>.btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 9.5px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+}
+
+.input-group-btn-vertical>.btn :hover {
+    background-color: rgb(148, 195, 0);
+}
+
+.input-group-btn-vertical>.btn:first-child {
+    border-top-right-radius: 4px;
+}
+
+.input-group-btn-vertical>.btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 4px;
+}
+
+.input-group-btn-vertical i {
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+
+.spinner {
+    margin-left: 13%;
+    margin-top: -8%;
+}
+.btnColor{
+    background-color: #14f014;
+}
+.updateBtn{
+    background-color: #a2d974;
+}
+.input-group .form-control{
+    z-index: 0 !important;
+}
