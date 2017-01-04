@@ -39,3 +39,18 @@ $(function() {
         clearInterval(action);
     });
 });
+var count = 0;
+
+// function shipping() {
+//     var ship = document.getElementById('ship');
+//     count++;
+//     if (count) {
+//         ship.display = "block";
+//     }
+// }
+$(document).ready(function(){
+$('#ship').on('click', function(){
+
+ $('#shipOpen').toggleClass('open');
+});
+});
